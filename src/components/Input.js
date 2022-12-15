@@ -6,7 +6,7 @@ class Input extends Component {
   }
   state = {};
   render() {
-    const {label, value, onChange} = this.props;
+    const { label, value, onChange } = this.props;
     return (
       <div class="field">
         <label>{label}:</label>

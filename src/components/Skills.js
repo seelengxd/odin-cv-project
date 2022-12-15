@@ -6,10 +6,11 @@ class Skills extends Component {
   }
   state = {};
   render() {
+    const {skills} = this.props;
     return (
       <div id="skills">
         <div className="header">Skills</div>
-        <div></div>
+        <div>{skills.skillList.map((skill) => skill.skill && <div className="badge" key={skill.id}>{skill.skill}</div>)}</div>
       </div>
     );
   }

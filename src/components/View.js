@@ -13,7 +13,7 @@ class View extends Component {
     return (
       <div className="view">
         <Particulars particulars={this.props.particulars} />
-        <Skills />
+        <Skills skills={this.props.skills} />
         <Education />
         <Work />
       </div>
