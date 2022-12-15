@@ -135,3 +135,9 @@ button:not(.delete) {
 button {
   cursor: pointer;
 }
+
+.App > h1:first-child {
+  text-align: center;
+  background-color: #FC6932;
+  color: #eee;
+}
