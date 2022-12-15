@@ -24,7 +24,7 @@ class Cv extends Component {
       });
     return (
       <div className="cv">
-        <Form helper={helper} />
+        <Form helper={helper} currentState={this.state} />
         <View particulars={this.state.particulars} />
       </div>
     );

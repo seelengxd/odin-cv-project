@@ -7,14 +7,14 @@ class FormParticulars extends Component {
   }
   state = {};
   render() {
-    const { helper } = this.props;
+    const { helper, currentParticulars } = this.props;
     return (
       <div>
         <h2>Personal Particulars</h2>
-        <Input label="Name" onChange={helper("name")} />
-        <Input label="Email" onChange={helper("email")} />
-        <Input label="Phone" onChange={helper("phone")} />
-        <Input label="Github" onChange={helper("github")} />
+        <Input label="Name" value={currentParticulars.name} onChange={helper("name")} />
+        <Input label="Email" value={currentParticulars.email} onChange={helper("email")} />
+        <Input label="Phone" value={currentParticulars.phone} onChange={helper("phone")} />
+        <Input label="Github" value={currentParticulars.github} onChange={helper("github")} />
       </div>
     );
   }

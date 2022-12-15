@@ -6,10 +6,11 @@ class Input extends Component {
   }
   state = {};
   render() {
+    const {label, value, onChange} = this.props;
     return (
       <div class="field">
-        <label>{this.props.label}:</label>
-        <input type="text" onChange={this.props.onChange} />
+        <label>{label}:</label>
+        <input type="text" value={value} onChange={onChange} />
       </div>
     );
   }

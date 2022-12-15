@@ -7,10 +7,10 @@ class Form extends Component {
   }
   state = {};
   render() {
-    const { helper } = this.props;
+    const { helper, currentState } = this.props;
     return (
       <div id="form">
-        <FormParticulars helper={helper("particulars")} />
+        <FormParticulars currentParticulars={currentState.particulars} helper={helper("particulars")} />
       </div>
     );
   }
