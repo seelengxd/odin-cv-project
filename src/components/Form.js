@@ -1,4 +1,5 @@
 import { Component } from "react";
+import FormEducation from "./FormEducation";
 import FormParticulars from "./FormParticulars";
 import FormSkills from "./FormSkills";
 
@@ -18,6 +19,10 @@ class Form extends Component {
         <FormSkills
           currentSkills={currentState.skills}
           helper={helper("skills")}
+        />
+        <FormEducation
+          currentEducation={currentState.education}
+          helper={helper("education")}
         />
       </div>
     );

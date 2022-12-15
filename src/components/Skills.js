@@ -10,7 +10,7 @@ class Skills extends Component {
     return (
       <div id="skills">
         <div className="header">Skills</div>
-        <div>{skills.skillList.map((skill) => skill.skill && <div className="badge" key={skill.id}>{skill.skill}</div>)}</div>
+        <div>{skills.map((skill) => skill.skill && <div className="badge" key={skill.id}>{skill.skill}</div>)}</div>
       </div>
     );
   }

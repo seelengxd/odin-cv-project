@@ -6,7 +6,8 @@
 
 .cv {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
   place-items: stretch;
 }
 
@@ -75,17 +76,43 @@ input {
   max-width: 500px;
 }
 
+#skills > div + div, #education > div + div {
+  padding: 5px;
+  margin: 20px;
+}
+
 #skills > div + div {
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 10px;
-  padding: 5px;
-  margin: 20px 0;
+
 }
 .expand {
   display: grid;
   grid-template-columns: 1fr 30px;
   gap: 10px;
   place-items: flex-start;
+}
+
+.edu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.edu-form {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  position: relative;
+}
+
+.edu-form > button {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.edu + .edu, .edu-form + .edu-form {
+  margin-top: 20px;
 }

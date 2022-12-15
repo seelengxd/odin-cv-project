@@ -27,6 +27,17 @@ class Cv extends Component {
         },
       ],
     },
+    education: {
+        nextId: 2,
+        educationList: [
+            {
+                id: 1,
+                school: "National University of Singapore",
+                title: "Bachelor of Computing in Computer Science",
+                date: "Aug 2021 - May 2025"
+            }
+        ]
+    }
   };
 
   render() {
@@ -38,7 +49,7 @@ class Cv extends Component {
     return (
       <div className="cv">
         <Form helper={helper} currentState={this.state} />
-        <View particulars={this.state.particulars} skills={this.state.skills} />
+        <View particulars={this.state.particulars} skills={this.state.skills.skillList} education={this.state.education.educationList} />
       </div>
     );
   }

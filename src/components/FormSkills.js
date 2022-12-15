@@ -48,7 +48,7 @@ class FormSkills extends Component {
               <button onClick={() => this.deleteSkill(skill.id)}>X</button>
             </div>
           ))}
-        <button onClick={this.addSkill.bind(this)}>+ Add a skill</button>
+        <button onClick={this.addSkill.bind(this)}>+ Add skill</button>
       </div>
     );
   }
