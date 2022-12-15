@@ -23,7 +23,6 @@ class FormEducation extends Component {
         ]);
 
         await helper("nextId")(currentEducation.nextId + 1);
-
     }
 
     deleteEducation(id) {
@@ -40,7 +39,7 @@ class FormEducation extends Component {
                 <Input label="School" value={edu.school} onChange={e => this.updateEducation(edu.id, {...edu, school: e.target.value})}/>
                 <Input label="Title" value={edu.title} onChange={e => this.updateEducation(edu.id, {...edu, title: e.target.value})}/>
                 <Input label="Date" value={edu.date} onChange={e => this.updateEducation(edu.id, {...edu, date: e.target.value})} />
-                <button onClick={() => this.deleteEducation(edu.id)}>X</button>
+                <button onClick={() => this.deleteEducation(edu.id)} className="delete">X</button>
                 </div>)}
             <button onClick={this.addEducation.bind(this)}>+ Add education</button>
           </div> );

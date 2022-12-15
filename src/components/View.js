@@ -15,7 +15,7 @@ class View extends Component {
         <Particulars particulars={this.props.particulars} />
         <Skills skills={this.props.skills} />
         <Education education={this.props.education}/>
-        <Work />
+        <Work work={this.props.work} />
       </div>
     );
   }

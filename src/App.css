@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  line-height: 1.5;
 }
 
 .cv {
@@ -57,7 +58,7 @@
 
 .field {
   display: grid;
-  grid-template-columns: 50px 1fr;
+  grid-template-columns: 60px 1fr;
   gap: 20px;
   justify-items: flex-start;
   margin-bottom: 10px;
@@ -77,7 +78,8 @@ input {
 }
 
 #skills > div + div,
-#education > div + div {
+#education > div + div,
+#work > div + div {
   padding: 5px;
   margin: 20px;
 }
@@ -95,7 +97,7 @@ input {
   place-items: flex-start;
 }
 
-.edu {
+.edu, .work > div {
   display: flex;
   justify-content: space-between;
 }
@@ -107,13 +109,29 @@ input {
   position: relative;
 }
 
-.edu-form > button {
+.edu-form > button.delete {
   position: absolute;
   top: 0;
   right: 0;
 }
 
 .edu + .edu,
-.edu-form + .edu-form {
+.edu-form + .edu-form, .work + .work {
   margin-top: 20px;
+}
+
+li {
+  margin-left: 20px;
+}
+
+button:not(.delete) {
+  padding: 10px;
+}
+
+.edu-form + button {
+  margin-top: 10px;
+}
+
+button {
+  cursor: pointer;
 }

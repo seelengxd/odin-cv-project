@@ -2,6 +2,7 @@ import { Component } from "react";
 import FormEducation from "./FormEducation";
 import FormParticulars from "./FormParticulars";
 import FormSkills from "./FormSkills";
+import FormWork from "./FormWork";
 
 class Form extends Component {
   constructor(props) {
@@ -24,6 +25,7 @@ class Form extends Component {
           currentEducation={currentState.education}
           helper={helper("education")}
         />
+        <FormWork currentWork={currentState.work} helper={helper("work")} />
       </div>
     );
   }

@@ -37,6 +37,18 @@ class Cv extends Component {
                 date: "Aug 2021 - May 2025"
             }
         ]
+    },
+    work: {
+        nextId: 2,
+        workList: [
+            {
+                id: 1,
+                company: "some cool place",
+                role: "Software Engineer Intern",
+                date: "May 2022 - Jul 2022",
+                points: ["I did task A", "I also did task B"]
+            }
+        ]
     }
   };
 
@@ -49,7 +61,7 @@ class Cv extends Component {
     return (
       <div className="cv">
         <Form helper={helper} currentState={this.state} />
-        <View particulars={this.state.particulars} skills={this.state.skills.skillList} education={this.state.education.educationList} />
+        <View particulars={this.state.particulars} skills={this.state.skills.skillList} education={this.state.education.educationList} work={this.state.work.workList} />
       </div>
     );
   }
