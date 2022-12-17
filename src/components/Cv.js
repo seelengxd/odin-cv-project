@@ -64,10 +64,9 @@ function Cv() {
     }
 
 
-    const helper = (firstKey) => (secondKey) => (value) =>
-      stateSetters[firstKey]({ ...state[firstKey], [secondKey]: value })
+    const helper = (firstKey) => async (kv) =>
+      await stateSetters[firstKey]({ ...state[firstKey], ...kv })
 
-    console.log(particulars)
     return (
       <div className="cv">
         <Form helper={helper} particulars={particulars} skills={skills} education={education} work={work} />
