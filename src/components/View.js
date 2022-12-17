@@ -4,6 +4,7 @@ import Skills from "./Skills";
 import Work from "./Work";
 
 function View({ particulars, skills, education, work }) {
+  console.log(particulars)
   return (
     <div className="view">
       <Particulars particulars={particulars} />
