@@ -4,7 +4,7 @@ function FormEducation({ helper, currentEducation }) {
   const updateEducation = (id, newEducation) => {
     helper({
       educationList: currentEducation.educationList
-        .filter((edu) => edu.id != id)
+        .filter((edu) => edu.id !== id)
         .concat(newEducation),
     });
   };
@@ -22,7 +22,7 @@ function FormEducation({ helper, currentEducation }) {
   const deleteEducation = (id) => {
     helper({
       educationList: currentEducation.educationList.filter(
-        (edu) => edu.id != id
+        (edu) => edu.id !== id
       ),
     });
   };

@@ -4,7 +4,7 @@ function FormSkills({ helper, currentSkills }) {
   const updateSkill = (id, newSkillName) => {
     helper({
       skillList: currentSkills.skillList
-        .filter((skill) => skill.id != id)
+        .filter((skill) => skill.id !== id)
         .concat({ id, skill: newSkillName }),
     });
   };
@@ -21,7 +21,7 @@ function FormSkills({ helper, currentSkills }) {
 
   const deleteSkill = (id) =>
     helper({
-      skillList: currentSkills.skillList.filter((skill) => skill.id != id),
+      skillList: currentSkills.skillList.filter((skill) => skill.id !== id),
     });
 
   return (

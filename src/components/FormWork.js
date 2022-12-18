@@ -4,7 +4,7 @@ function FormWork({ currentWork, helper }) {
   const updateWork = (id, newWork) => {
     helper({
       workList: currentWork.workList
-        .filter((work) => work.id != id)
+        .filter((work) => work.id !== id)
         .concat(newWork),
     });
   };
@@ -21,7 +21,7 @@ function FormWork({ currentWork, helper }) {
 
   const deleteWork = (id) => {
     helper({
-      workList: currentWork.workList.filter((work) => work.id != id),
+      workList: currentWork.workList.filter((work) => work.id !== id),
     });
   };
 
